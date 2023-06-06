@@ -8,11 +8,17 @@
   <header class="bg-navy text-white py-3">
     <div class="container">
       <h1 class="m-0">Dataset 1 Configuration</h1>
+      <nav>
+        <a href="index.html" class="text-white">Home</a> |
+        <a href="dataset2.html" class="text-white">Dataset 2</a> |
+        <a href="dataset3.html" class="text-white">Dataset 3</a>
+      </nav>
     </div>
   </header>
 
   <div class="content py-5">
     <div class="container">
+      <h2>Dataset: Dataset 1</h2>
       <h2>Vendor: Vendor 1</h2>
       <p>Description of Dataset 1.</p>
 
@@ -24,7 +30,7 @@
 
         <h3>Configuration Options</h3>
 
-        <div class="mb-3">
+        <div class="mb-3 config-option">
           <label for="dateTime">DateTime Standardization</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="dateTime">
@@ -32,7 +38,7 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 config-option">
           <label for="geographicalInfo">Additional Geographical Information</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="geographicalInfo">
@@ -40,7 +46,7 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 config-option">
           <label for="suggestedFeature">Suggested Feature Creation</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="suggestedFeature">
@@ -48,7 +54,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Generate Config File</button>
+        <button type="submit" class="btn btn-primary">Save to Config</button>
       </form>
     </div>
   </div>
