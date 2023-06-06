@@ -6,18 +6,61 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dataset1.html">Dataset 1</a></li>
-        <li><a href="dataset2.html">Dataset 2</a></li>
-        <li><a href="dataset3.html">Dataset 3</a></li>
-      </ul>
-    </nav>
+    <h1>Configuration System</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search datasets and vendors">
+      <button>Search</button>
+    </div>
   </header>
 
-  <h1>Configuration System</h1>
-  <p>Welcome to the Configuration System. Select a dataset to configure.</p>
+  <nav>
+    <div class="filters">
+      <h2>Vendors</h2>
+      <ul>
+        <li><a href="#">Vendor 1</a></li>
+        <li><a href="#">Vendor 2</a></li>
+        <li><a href="#">Vendor 3</a></li>
+      </ul>
+    </div>
+    <div class="filters">
+      <h2>Datasets</h2>
+      <ul>
+        <li><a href="#">Dataset 1</a></li>
+        <li><a href="#">Dataset 2</a></li>
+        <li><a href="#">Dataset 3</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h2>All Datasets</h2>
+    <ul class="dataset-list">
+      <li>
+        <div class="dataset-card">
+          <h3>Dataset 1</h3>
+          <p>Vendor: Vendor 1</p>
+          <p>Description of Dataset 1.</p>
+          <a href="dataset1.html">Configure Dataset</a>
+        </div>
+      </li>
+      <li>
+        <div class="dataset-card">
+          <h3>Dataset 2</h3>
+          <p>Vendor: Vendor 2</p>
+          <p>Description of Dataset 2.</p>
+          <a href="dataset2.html">Configure Dataset</a>
+        </div>
+      </li>
+      <li>
+        <div class="dataset-card">
+          <h3>Dataset 3</h3>
+          <p>Vendor: Vendor 3</p>
+          <p>Description of Dataset 3.</p>
+          <a href="dataset3.html">Configure Dataset</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
