@@ -61,3 +61,7 @@ body {
 .dataset-card p {
   margin-bottom: 10px;
 }
+
+.form-check-label {
+  display: block;
+}
