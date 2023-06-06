@@ -64,4 +64,14 @@ body {
 
 .form-check-label {
   display: block;
+  margin-bottom: 10px; /* Add spacing between options */
+}
+
+.text-danger {
+  color: red;
+}
+
+/* Additional spacing for configuration options */
+.mb-3.config-option {
+  margin-bottom: 20px;
 }
