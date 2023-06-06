@@ -5,19 +5,53 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dataset1.html">Dataset 1</a></li>
-        <li><a href="dataset2.html">Dataset 2</a></li>
-        <li><a href="dataset3.html">Dataset 3</a></li>
-      </ul>
-    </nav>
+  <header class="bg-navy text-white py-3">
+    <div class="container">
+      <h1 class="m-0">Dataset 1 Configuration</h1>
+    </div>
   </header>
 
-  <h1>Dataset 1 Configuration</h1>
-  <p>Configure Dataset 1 here.</p>
+  <div class="content py-5">
+    <div class="container">
+      <h2>Vendor: Vendor 1</h2>
+      <p>Description of Dataset 1.</p>
+
+      <form>
+        <div class="mb-3">
+          <label for="apiKeys">API Keys<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="apiKeys" required>
+        </div>
+
+        <h3>Configuration Options</h3>
+
+        <div class="mb-3">
+          <label for="dateTime">DateTime Standardization</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="dateTime">
+            <label class="form-check-label" for="dateTime">Enable DateTime Standardization</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="geographicalInfo">Additional Geographical Information</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="geographicalInfo">
+            <label class="form-check-label" for="geographicalInfo">Add Additional Geographical Information</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="suggestedFeature">Suggested Feature Creation</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="suggestedFeature">
+            <label class="form-check-label" for="suggestedFeature">Enable Suggested Feature Creation</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Config File</button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
