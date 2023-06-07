@@ -25,8 +25,19 @@ $(document).ready(function () {
 });
 
 function nextSlider(currentSliderId, nextSliderId) {
-  $('#' + currentSliderId).hide();
-  $('#' + nextSliderId).show();
+  const currentSlider = document.getElementById(currentSliderId);
+  const nextSlider = document.getElementById(nextSliderId);
+  
+  currentSlider.style.display = "none";
+  nextSlider.style.display = "block";
+}
+
+function previousSlider(currentSliderId, previousSliderId) {
+  const currentSlider = document.getElementById(currentSliderId);
+  const previousSlider = document.getElementById(previousSliderId);
+  
+  currentSlider.style.display = "none";
+  previousSlider.style.display = "block";
 }
 
 function saveConfig() {
