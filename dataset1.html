@@ -7,6 +7,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .box h4 {
+      margin-top: 0;
+    }
+
+    .config-option {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .config-option .sub-options {
+      margin-top: 10px;
+    }
+
+    .config-option .sub-options label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
   <header class="bg-navy text-white py-3">
@@ -35,75 +60,74 @@
 
         <h3>Configuration Options</h3>
 
-        <div class="mb-3 config-option">
-          <div class="box">
-            <h4>Collector:</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="collectorFrequency">
-              <label class="form-check-label" for="collectorFrequency" data-bs-toggle="tooltip" data-bs-placement="right" title="Frequency of the collector">Frequency</label>
-              <div class="input-group">
-                <input type="number" class="form-control" min="1" id="collectorFrequencyValue" required>
-                <select class="form-select" id="collectorFrequencyUnit" required>
-                  <option value="minutes">Minutes</option>
-                  <option value="hours">Hours</option>
-                  <option value="days">Days</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="collectorRetries">
-              <label class="form-check-label" for="collectorRetries" data-bs-toggle="tooltip" data-bs-placement="right" title="Number of retries for the collector">Number of retries</label>
-              <input type="number" class="form-control" min="1" max="10" id="collectorRetriesValue" required>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="collectorDestination">
-              <label class="form-check-label" for="collectorDestination" data-bs-toggle="tooltip" data-bs-placement="right" title="Destination configuration for the collector">Destination</label>
-              <div class="sub-options">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="collectorSchema">
-                  <label class="form-check-label" for="collectorSchema">Schema</label>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <h4>Collector:</h4>
+              <div class="config-option">
+                <label for="collectorFrequency">Frequency</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" id="collectorFrequency" required>
+                  <select class="form-select" id="collectorFrequencyUnit" required>
+                    <option value="minutes">Minutes</option>
+                    <option value="hours">Hours</option>
+                    <option value="days">Days</option>
+                  </select>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="collectorTableName">
-                  <label class="form-check-label" for="collectorTableName">Table Name</label>
+              </div>
+              <div class="config-option">
+                <label for="collectorRetries">Number of retries</label>
+                <input type="number" class="form-control" id="collectorRetries" min="1" max="10" required>
+              </div>
+              <div class="config-option">
+                <label for="collectorDestination">Destination</label>
+                <div class="sub-options">
+                  <div class="mb-3">
+                    <label for="collectorSchema">Schema</label>
+                    <input type="text" class="form-control" id="collectorSchema" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="collectorTableName">Table Name</label>
+                    <input type="text" class="form-control" id="collectorTableName" required>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="mb-3 config-option">
-          <div class="box">
-            <h4>Transformer:</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="transformerDatetime">
-              <label class="form-check-label" for="transformerDatetime" data-bs-toggle="tooltip" data-bs-placement="right" title="Datetime transformation">Datetime</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="transformerGeo">
-              <label class="form-check-label" for="transformerGeo" data-bs-toggle="tooltip" data-bs-placement="right" title="Geographical transformation">Geo</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="transformerSuggestedFeature">
-              <label class="form-check-label" for="transformerSuggestedFeature" data-bs-toggle="tooltip" data-bs-placement="right" title="Suggested feature creation in the transformer">Suggested Feature Creation</label>
+          <div class="col-md-4">
+            <div class="box">
+              <h4>Transformer:</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="transformerDatetime">
+                <label class="form-check-label" for="transformerDatetime" data-bs-toggle="tooltip" data-bs-placement="right" title="Datetime transformation">Datetime</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="transformerGeo">
+                <label class="form-check-label" for="transformerGeo" data-bs-toggle="tooltip" data-bs-placement="right" title="Geographical transformation">Geo</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="transformerSuggestedFeature">
+                <label class="form-check-label" for="transformerSuggestedFeature" data-bs-toggle="tooltip" data-bs-placement="right" title="Suggested feature creation in the transformer">Suggested Feature Creation</label>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="mb-3 config-option">
-          <div class="box">
-            <h4>Analytics:</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="analyticsCoverage">
-              <label class="form-check-label" for="analyticsCoverage" data-bs-toggle="tooltip" data-bs-placement="right" title="Coverage analytics">Coverage</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="analyticsSharpRatios">
-              <label class="form-check-label" for="analyticsSharpRatios" data-bs-toggle="tooltip" data-bs-placement="right" title="Sharp Ratios analytics">Sharp Ratios</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="analyticsBasic">
-              <label class="form-check-label" for="analyticsBasic" data-bs-toggle="tooltip" data-bs-placement="right" title="Basic analytics">Basic analytics</label>
+          <div class="col-md-4">
+            <div class="box">
+              <h4>Analytics:</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsCoverage">
+                <label class="form-check-label" for="analyticsCoverage" data-bs-toggle="tooltip" data-bs-placement="right" title="Coverage analytics">Coverage</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsSharpRatios">
+                <label class="form-check-label" for="analyticsSharpRatios" data-bs-toggle="tooltip" data-bs-placement="right" title="Sharp Ratios analytics">Sharp Ratios</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsBasic">
+                <label class="form-check-label" for="analyticsBasic" data-bs-toggle="tooltip" data-bs-placement="right" title="Basic analytics">Basic analytics</label>
+              </div>
             </div>
           </div>
         </div>
