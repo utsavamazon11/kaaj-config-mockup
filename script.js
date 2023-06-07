@@ -23,3 +23,14 @@ $(document).ready(function () {
     a.click();
   });
 });
+
+function nextSlider(currentSliderId, nextSliderId) {
+  $('#' + currentSliderId).hide();
+  $('#' + nextSliderId).show();
+}
+
+function saveConfig() {
+  // Retrieve and process the form data here
+  // Store the configuration as a YAML file or perform any other necessary actions
+  alert('Configuration saved!');
+}
