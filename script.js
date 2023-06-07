@@ -3,7 +3,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-  $('#configForm').submit(function (event) {
+  $('#configForm').on('submit', function (event) {
     event.preventDefault();
 
     const formData = new FormData(this);
@@ -19,7 +19,7 @@ $(document).ready(function () {
     const url = URL.createObjectURL(yamlBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'config_dataset1.yaml';
+    a.download = 'config.yaml';
     a.click();
   });
 });
