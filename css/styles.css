@@ -76,19 +76,6 @@ body {
   margin-bottom: 20px;
 }
 
-.slider-container {
-  display: flex;
-  overflow-x: scroll;
-  margin-bottom: 20px;
-}
-
-.slider {
-  flex-shrink: 0;
-  width: 100%;
-  min-width: 100%;
-  padding: 20px;
-}
-
 .box {
   border: 1px solid #ccc;
   padding: 20px;
@@ -111,4 +98,38 @@ body {
 .config-option .sub-options label {
   display: block;
   margin-bottom: 5px;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.slider:not(:last-child) {
+  margin-right: 20px;
+}
+
+.box {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.config-option {
+  margin-bottom: 10px;
+}
+
+.config-option label {
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.required-field {
+  width: 60%;
 }
