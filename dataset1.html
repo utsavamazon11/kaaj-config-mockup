@@ -34,8 +34,8 @@
             <div class="config-option">
               <label for="collectorFrequency">Frequency</label>
               <div class="input-group">
-                <input type="number" class="form-control" id="collectorFrequency" required>
-                <select class="form-select" id="collectorFrequencyUnit" required>
+                <input type="number" class="form-control required-field" id="collectorFrequency" required>
+                <select class="form-select required-field" id="collectorFrequencyUnit" required>
                   <option value="minutes">Minutes</option>
                   <option value="hours">Hours</option>
                   <option value="days">Days</option>
@@ -44,15 +44,15 @@
             </div>
             <div class="config-option">
               <label for="collectorRetries">Number of retries</label>
-              <input type="number" class="form-control" id="collectorRetries" min="1" max="10" required>
+              <input type="number" class="form-control required-field" id="collectorRetries" min="1" max="10" required>
             </div>
             <div class="config-option">
               <label for="collectorSchema">Schema</label>
-              <input type="text" class="form-control" id="collectorSchema" required>
+              <input type="text" class="form-control required-field" id="collectorSchema" required>
             </div>
             <div class="config-option">
               <label for="collectorTableName">Table Name</label>
-              <input type="text" class="form-control" id="collectorTableName" required>
+              <input type="text" class="form-control required-field" id="collectorTableName" required>
             </div>
           </div>
           <button class="btn btn-primary" onclick="nextSlider('collectorSlider', 'transformerSlider')">Next</button>
@@ -80,6 +80,7 @@
               </div>
             </div>
           </div>
+          <button class="btn btn-primary" onclick="previousSlider('transformerSlider', 'collectorSlider')">Back</button>
           <button class="btn btn-primary" onclick="nextSlider('transformerSlider', 'analyticsSlider')">Next</button>
         </div>
 
@@ -105,6 +106,7 @@
               </div>
             </div>
           </div>
+          <button class="btn btn-primary" onclick="previousSlider('analyticsSlider', 'transformerSlider')">Back</button>
           <button class="btn btn-primary" onclick="saveConfig()">Save Config</button>
         </div>
       </div>
