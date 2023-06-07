@@ -8,6 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    .slider-container {
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      flex-shrink: 0;
+      width: 100%;
+      min-width: 100%;
+      padding: 20px;
+    }
+
     .box {
       border: 1px solid #ccc;
       padding: 20px;
@@ -52,93 +65,104 @@
       <h2>Vendor: Vendor 1</h2>
       <p>Description of Dataset 1.</p>
 
-      <form id="configForm">
-        <div class="mb-3">
-          <label for="apiKeys" data-bs-toggle="tooltip" data-bs-placement="right" title="API Keys from this data vendor">API Keys<span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="apiKeys" required>
-        </div>
-
-        <h3>Configuration Options</h3>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box">
-              <h4>Collector:</h4>
-              <div class="config-option">
-                <label for="collectorFrequency">Frequency<span class="text-danger">*</span></label>
-                <div class="input-group">
-                  <input type="number" class="form-control" id="collectorFrequency" required>
-                  <select class="form-select" id="collectorFrequencyUnit" required>
-                    <option value="minutes">Minutes</option>
-                    <option value="hours">Hours</option>
-                    <option value="days">Days</option>
-                  </select>
-                </div>
-              </div>
-              <div class="config-option">
-                <label for="collectorRetries">Number of retries<span class="text-danger">*</span></label>
-                <input type="number" class="form-control" id="collectorRetries" min="1" max="10" required>
-              </div>
-              <div class="config-option">
-                <label for="collectorDestination">Destination<span class="text-danger">*</span></label>
-                <div class="sub-options">
-                  <div class="mb-3">
-                    <label for="collectorSchema">Schema<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="collectorSchema" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="collectorTableName">Table Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="collectorTableName" required>
-                  </div>
-                </div>
+      <div class="slider-container">
+        <div class="slider" id="collectorSlider">
+          <h3>Collector:</h3>
+          <div class="box">
+            <div class="config-option">
+              <label for="collectorFrequency">Frequency</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="collectorFrequency" required>
+                <select class="form-select" id="collectorFrequencyUnit" required>
+                  <option value="minutes">Minutes</option>
+                  <option value="hours">Hours</option>
+                  <option value="days">Days</option>
+                </select>
               </div>
             </div>
+            <div class="config-option">
+              <label for="collectorRetries">Number of retries</label>
+              <input type="number" class="form-control" id="collectorRetries" min="1" max="10" required>
+            </div>
+            <div class="config-option">
+              <label for="collectorSchema">Schema</label>
+              <input type="text" class="form-control" id="collectorSchema" required>
+            </div>
+            <div class="config-option">
+              <label for="collectorTableName">Table Name</label>
+              <input type="text" class="form-control" id="collectorTableName" required>
+            </div>
           </div>
+          <button class="btn btn-primary" onclick="nextSlider('collectorSlider', 'transformerSlider')">Next</button>
+        </div>
 
-          <div class="col-md-4">
-            <div class="box">
-              <h4>Transformer:</h4>
+        <div class="slider" id="transformerSlider" style="display: none;">
+          <h3>Transformer:</h3>
+          <div class="box">
+            <div class="config-option">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="transformerDatetime">
-                <label class="form-check-label" for="transformerDatetime" data-bs-toggle="tooltip" data-bs-placement="right" title="Datetime transformation">Datetime</label>
+                <label class="form-check-label" for="transformerDatetime">Datetime</label>
               </div>
+            </div>
+            <div class="config-option">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="transformerGeo">
-                <label class="form-check-label" for="transformerGeo" data-bs-toggle="tooltip" data-bs-placement="right" title="Geographical transformation">Geo</label>
+                <label class="form-check-label" for="transformerGeo">Geo</label>
               </div>
+            </div>
+            <div class="config-option">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="transformerSuggestedFeature">
-                <label class="form-check-label" for="transformerSuggestedFeature" data-bs-toggle="tooltip" data-bs-placement="right" title="Suggested feature creation in the transformer">Suggested Feature Creation</label>
+                <label class="form-check-label" for="transformerSuggestedFeature">Suggested Feature Creation</label>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="box">
-              <h4>Analytics:</h4>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="analyticsCoverage">
-                <label class="form-check-label" for="analyticsCoverage" data-bs-toggle="tooltip" data-bs-placement="right" title="Coverage analytics">Coverage</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="analyticsSharpRatios">
-                <label class="form-check-label" for="analyticsSharpRatios" data-bs-toggle="tooltip" data-bs-placement="right" title="Sharp Ratios analytics">Sharp Ratios</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="analyticsBasic">
-                <label class="form-check-label" for="analyticsBasic" data-bs-toggle="tooltip" data-bs-placement="right" title="Basic analytics">Basic analytics</label>
-              </div>
-            </div>
-          </div>
+          <button class="btn btn-primary" onclick="nextSlider('transformerSlider', 'analyticsSlider')">Next</button>
         </div>
 
-        <button type="submit" class="btn btn-primary">Save to Config</button>
-      </form>
+        <div class="slider" id="analyticsSlider" style="display: none;">
+          <h3>Analytics:</h3>
+          <div class="box">
+            <div class="config-option">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsCoverage">
+                <label class="form-check-label" for="analyticsCoverage">Coverage</label>
+              </div>
+            </div>
+            <div class="config-option">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsSharpRatios">
+                <label class="form-check-label" for="analyticsSharpRatios">Sharp Ratios</label>
+              </div>
+            </div>
+            <div class="config-option">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="analyticsBasic">
+                <label class="form-check-label" for="analyticsBasic">Basic analytics</label>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="saveConfig()">Save Config</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    function nextSlider(currentSliderId, nextSliderId) {
+      $('#' + currentSliderId).hide();
+      $('#' + nextSliderId).show();
+    }
+
+    function saveConfig() {
+      // Retrieve and process the form data here
+      // Store the configuration as a YAML file or perform any other necessary actions
+      alert('Configuration saved!');
+    }
+  </script>
 </body>
 </html>
