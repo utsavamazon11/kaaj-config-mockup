@@ -41,6 +41,17 @@ function previousSlider(currentSliderId, previousSliderId) {
 }
 
 function saveConfig() {
+  const collectorFrequency = document.getElementById('collectorFrequency').value;
+  const collectorFrequencyUnit = document.getElementById('collectorFrequencyUnit').value;
+  const collectorRetries = document.getElementById('collectorRetries').value;
+  const collectorSchema = document.getElementById('collectorSchema').value;
+  const collectorTableName = document.getElementById('collectorTableName').value;
+
+  if (!collectorFrequency || !collectorRetries || !collectorSchema || !collectorTableName) {
+    alert('Please fill in all required fields in the Collector section.');
+    return;
+  }
+
   // Retrieve and process the form data here
   // Store the configuration as a YAML file or perform any other necessary actions
   alert('Configuration saved!');
