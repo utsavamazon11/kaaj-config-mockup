@@ -4,12 +4,15 @@
   <title>Dataset 1 Configuration</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="bg-navy text-white py-3">
     <div class="container">
       <h1 class="m-0">Dataset 1 Configuration</h1>
-      <h4 class="m-0">Configure the integration and transformation for this dataset</h4>      
+      <h5 class="m-0">Configure the integration and transformation for this dataset</h5>      
       <nav>
         <a href="index.html" class="text-white">Home</a> |
         <a href="dataset2.html" class="text-white">Dataset 2</a> |
@@ -26,7 +29,7 @@
 
       <form>
         <div class="mb-3">
-          <label for="apiKeys" data-bs-toggle="tooltip" data-bs-placement="right" title="Explanation for API Keys">API Keys<span class="text-danger">*</span></label>
+          <label for="apiKeys" data-bs-toggle="tooltip" data-bs-placement="right" title="API Keys from this data vendor">API Keys<span class="text-danger">*</span></label>
           <input type="text" class="form-control" id="apiKeys" required>
         </div>
 
@@ -35,21 +38,21 @@
         <div class="mb-3 config-option">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="dateTime">
-            <label class="form-check-label" for="dateTime" data-bs-toggle="tooltip" data-bs-placement="right" title="Explanation for DateTime">Enable DateTime Standardization</label>
+            <label class="form-check-label" for="dateTime" data-bs-toggle="tooltip" data-bs-placement="right" title="Standardize all timestamp columns in a specific format">Enable DateTime Standardization</label>
           </div>
         </div>
 
         <div class="mb-3 config-option">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="geographicalInfo">
-            <label class="form-check-label" for="geographicalInfo" data-bs-toggle="tooltip" data-bs-placement="right" title="Explanation for Geographical Information">Add Additional Geographical Information</label>
+            <label class="form-check-label" for="geographicalInfo" data-bs-toggle="tooltip" data-bs-placement="right" title="Add additional columns for all Geographical Information such as city, state, timezone etc. from a given zipcode or lat/long">Add Additional Geographical Information</label>
           </div>
         </div>
 
         <div class="mb-3 config-option">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="suggestedFeature">
-            <label class="form-check-label" for="suggestedFeature" data-bs-toggle="tooltip" data-bs-placement="right" title="Explanation for Suggested Feature Creation">Enable Suggested Feature Creation</label>
+            <label class="form-check-label" for="suggestedFeature" data-bs-toggle="tooltip" data-bs-placement="right" title="Add additional columns suggested by Kaaj to enrich your data">Enable Suggested Feature Creation</label>
           </div>
         </div>
 
