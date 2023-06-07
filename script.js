@@ -1,4 +1,3 @@
-// script.js
 $(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
 });
@@ -20,9 +19,7 @@ $(document).ready(function () {
     const url = URL.createObjectURL(yamlBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'config.yaml';
-    document.body.appendChild(a);
+    a.download = 'config_dataset1.yaml';
     a.click();
-    document.body.removeChild(a);
   });
 });
