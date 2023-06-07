@@ -75,3 +75,40 @@ body {
 .mb-3.config-option {
   margin-bottom: 20px;
 }
+
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
+.slider {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 100%;
+  padding: 20px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box h4 {
+  margin-top: 0;
+}
+
+.config-option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.config-option .sub-options {
+  margin-top: 10px;
+}
+
+.config-option .sub-options label {
+  display: block;
+  margin-bottom: 5px;
+}
