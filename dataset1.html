@@ -3,6 +3,7 @@
 <head>
   <title>Dataset 1 Configuration</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 <body>
   <header class="bg-navy text-white py-3">
@@ -34,7 +35,7 @@
         <div class="mb-3 config-option">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="dateTime">
-            <label class="form-check-label" for="dateTime">Enable DateTime Standardization</label>
+            <label class="form-check-label" for="dateTime" data-toggle="tooltip" data-title="Explanation for DateTime">Enable DateTime Standardization</label>
           </div>
         </div>
 
@@ -58,5 +59,13 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+ 
+<script>
+  // Initialize Bootstrap tooltips
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
 </body>
 </html>
