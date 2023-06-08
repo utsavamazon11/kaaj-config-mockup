@@ -1,13 +1,10 @@
 $(document).ready(function () {
-  // Instead of using 'submit' event on form, we're using 'click' event on the Save Config button
-  $('#saveConfigBtn').on('click', function (event) {
-    event.preventDefault();
-
-    saveConfig();
-  });
+  // no need to attach the event handler here as you've attached it in HTML directly
 });
 
 function nextSlider(currentSliderId, nextSliderId) {
+  event.preventDefault(); // prevent form submission
+
   const currentSlider = document.getElementById(currentSliderId);
   const nextSlider = document.getElementById(nextSliderId);
 
@@ -16,6 +13,8 @@ function nextSlider(currentSliderId, nextSliderId) {
 }
 
 function previousSlider(currentSliderId, previousSliderId) {
+  event.preventDefault(); // prevent form submission
+
   const currentSlider = document.getElementById(currentSliderId);
   const previousSlider = document.getElementById(previousSliderId);
 
@@ -24,6 +23,8 @@ function previousSlider(currentSliderId, previousSliderId) {
 }
 
 function saveConfig() {
+  event.preventDefault(); // prevent form submission
+
   const data = {};
   
   // Gather data from Collector section
