@@ -26,7 +26,6 @@ $(document).ready(function () {
           'Table Name': collectorTableName
         }
       }
-      // Add Transformer and Analytics sections if needed
     };
 
     const yamlData = jsyaml.safeDump(data);
@@ -77,7 +76,6 @@ function saveConfig() {
         'Table Name': collectorTableName
       }
     }
-    // Add Transformer and Analytics sections if needed
   };
 
   const yamlData = jsyaml.safeDump(data);
