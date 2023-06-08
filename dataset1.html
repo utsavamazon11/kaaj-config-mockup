@@ -60,7 +60,7 @@
                 <input type="text" class="form-control required-field" id="collectorTableName" required>
               </div>
             </div>
-            <button class="btn btn-primary" onclick="nextSlider('collectorSlider', 'transformerSlider')">Next</button>
+            <button type="button" class="btn btn-primary" onclick="nextSlider('collectorSlider', 'transformerSlider')">Next</button>
           </div>
 
           <div class="slider" id="transformerSlider" style="display: none;">
@@ -85,8 +85,8 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary" onclick="previousSlider('transformerSlider', 'collectorSlider')">Back</button>
-            <button class="btn btn-primary" onclick="nextSlider('transformerSlider', 'analyticsSlider')">Next</button>
+            <button type="button" class="btn btn-primary" onclick="previousSlider('transformerSlider', 'collectorSlider')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="nextSlider('transformerSlider', 'analyticsSlider')">Next</button>
           </div>
 
           <div class="slider" id="analyticsSlider" style="display: none;">
@@ -111,7 +111,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary" onclick="previousSlider('analyticsSlider', 'transformerSlider')">Back</button>
+            <button type="button" class="btn btn-primary" onclick="previousSlider('analyticsSlider', 'transformerSlider')">Back</button>
             <button class="btn btn-primary" onclick="saveConfig()">Save Config</button>
           </div>
         </div>
