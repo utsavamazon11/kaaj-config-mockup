@@ -1,3 +1,7 @@
+$(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip();
+});
+
 $(document).ready(function () {
   // no need to attach the event handler here as you've attached it in HTML directly
 });
