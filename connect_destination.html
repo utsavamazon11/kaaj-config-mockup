@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaaj AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.3/tailwind.min.css">
+  <style>
+    .selected {
+      border: 2px solid #6366F1;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+<div class="container mx-auto px-4">
+
+  <header class="flex justify-between py-6">
+    <div>
+      <h1 class="text-4xl font-bold text-gray-800">Kaaj AI</h1>
+      <p class="text-gray-600">Let data work for you</p>
+    </div>
+    <nav class="flex">
+      <a href="#" class="text-base font-bold text-indigo-800 text-sm mr-8 hover:text-indigo-800">Connect destination</a>
+      <a href="#" class="text-base text-gray-800 text-sm hover:text-indigo-500">Connect source</a>
+      <a href="#" class="text-base text-gray-800 text-sm hover:text-indigo-500">Complete initial sync</a>
+    </nav>
+  </header>
+
+  <div class="w-1/5 pt-8 fixed">
+    <nav>
+      <a href="#" class="text-base text-gray-800 text-sm block mb-8 hover:text-indigo-500">Connectors</a>
+      <a href="#" class="text-base text-gray-800 text-sm block mb-8 hover:text-indigo-500">Transformations</a>
+      <a href="#" class="text-base text-gray-800 text-sm block mb-8 hover:text-indigo-500">Destinations</a>
+    </nav>
+  </div>
+
+  <div class="main-box ml-64 mt-8">
+    <div class="w-3/5 mb-6 bg-gray border border-indigo-600 p-3 shadow rounded-lg flex justify-between items">
+      <span class="font-medium text-lg">Selected Destination:</span>
+      <span class="font-semibold text-lg">AWS Athena</span>
+    </div>
+    <h2 class="text-2xl mb-2">Select a Destination</h2>
+    <input type="text" class="search-bar w-full p-3 mb-6 border border-gray-300 rounded-full" placeholder="Search data destinations">
+
+    <div class="h-40 overflow-y-auto mb-6">
+      <ul class="space-y-4">
+        <li class="flex bg-white shadow rounded-lg p-2 data-destination">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="data:image/png;base64,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" alt="AWS Athena">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">AWS Athena</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-destination">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://global-uploads.webflow.com/5f8b0a1abe69652278dad51c/60ad30603ce79d2498f80739_google%20bigquery%20logo.png" alt="Google BigQuery">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Google BigQuery</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-destination">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://yt3.googleusercontent.com/_7KEqCHnfwYCkZmPrEAinVpFFKpvyK9IGcHDsZtaj68aCOi6Ige1Zl3B6MjHZUuurc-WjEv1tVM=s900-c-k-c0x00ffffff-no-rj" alt="Databricks">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Databricks</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="flex justify-between mt-6">
+      <button class="py-2 px-4 bg-gray-400 text-white rounded-full hover:bg-gray-600">Back</button>
+      <a href="connect_source.html">
+        <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500" id="continue-button" disabled>Continue</button>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$('.search-bar').on('keyup', function() {
+  var value = $(this).val().toLowerCase();
+  $('ul li').each(function() {
+    if($(this).text().toLowerCase().indexOf(value) > -1) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+});
+
+$('.data-destination').on('click', function() {
+  $(this).toggleClass('selected');
+  if ($('.selected').length > 0) {
+    $('#continue-button').prop('disabled', false);
+  } else {
+    $('#continue-button').prop('disabled', true);
+  }
+});
+</script>
+
+</body>
+</html>
