@@ -1,157 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Data Integration</title>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<style>
-body {
-  font-family: sans-serif;
-}
-
-.data-integration {
-  margin: 0 auto;
-  width: 500px;
-}
-
-.data-source {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.data-source-name {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.data-source-description {
-  font-size: 14px;
-}
-
-.nav-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ccc;
-  height: 50px;
-  padding: 10px;
-}
-
-.nav-item {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.nav-item a {
-  color: #000;
-  text-decoration: none;
-}
-
-.left-nav {
-  position: fixed;
-  left: 0;
-  top: 50px;
-  width: 20%;
-  background-color: #ccc;
-  height: calc(100% - 50px);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.main-box {
-  margin-left: 20%;
-  padding: 20px;
-  width: 80%;
-}
-
-.search-bar {
-  width: 300px;
-  margin-bottom: 10px;
-}
-
-.button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #808080;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-img {
-  width: 50px;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Data Integration</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<body class="font-sans bg-gray-100">
 
-<body>
+<div class="container mx-auto px-4">
 
-<div class="data-integration">
+  <header class="flex justify-between py-6">
+    <nav class="flex">
+      <a href="#" class="text-gray-800 text-sm mr-6 hover:text-indigo-500">Connect destination</a>
+      <a href="#" class="text-gray-800 text-sm mr-6 hover:text-indigo-500">Connect source</a>
+      <a href="#" class="text-gray-800 text-sm hover:text-indigo-500">Complete initial sync</a>
+    </nav>
+  </header>
 
-  <div class="nav-bar">
-    <div class="nav-item">
-      <a href="#">Connect destination</a>
-    </div>
-    <div class="nav-item">
-      <a href="#">Connect source</a>
-    </div>
-    <div class="nav-item">
-      <a href="#">Complete initial sync</a>
-    </div>
+  <div class="w-1/5 pt-8 fixed">
+    <nav>
+      <a href="#" class="text-gray-800 text-sm block mb-4 hover:text-indigo-500">Connectors</a>
+      <a href="#" class="text-gray-800 text-sm block mb-4 hover:text-indigo-500">Transformations</a>
+      <a href="#" class="text-gray-800 text-sm block mb-4 hover:text-indigo-500">Destinations</a>
+    </nav>
   </div>
 
-  <div class="left-nav">
-    <div class="nav-item">
-      <a href="#">Connectors</a>
-    </div>
-    <div class="nav-item">
-      <a href="#">Transformations</a>
-    </div>
-    <div class="nav-item">
-      <a href="#">Destinations</a>
-    </div>
-  </div>
+  <div class="main-box ml-64 mt-8">
+    <h2 class="text-2xl mb-2">Data Sources</h2>
+    <input type="text" class="search-bar w-full p-2 mb-6 border border-gray-300 rounded-md" placeholder="Search data sources">
 
-  <div class="main-box">
-    <h2>Data Sources</h2>
-    <input type="text" class="search-bar" placeholder="Search data sources">
-    <ul>
-      <li>
-        <img src="https://census.com/assets/img/data-sources/google-analytics.svg" alt="Google Analytics">
-        <h2 class="data-source-name">Google Analytics</h2>
-        <p class="data-source-description">Google Analytics is a web analytics service that tracks and reports website traffic.</p>
+    <ul class="space-y-4">
+      <!-- Repeat this block for each data source -->
+      <li class="flex bg-white shadow rounded p-4">
+        <img class="h-12 w-12" src="https://census.com/assets/img/data-sources/google-analytics.svg" alt="Google Analytics">
+        <div class="ml-4">
+          <h2 class="text-lg font-semibold">Google Analytics</h2>
+          <p class="text-gray-600">Google Analytics is a web analytics service that tracks and reports website traffic.</p>
+        </div>
       </li>
-      <li>
-        <img src="https://census.com/assets/img/data-sources/facebook-pixel.svg" alt="Facebook Pixel">
-        <h2 class="data-source-name">Facebook Pixel</h2>
-        <p class="data-source-description">Facebook Pixel is a tracking code that helps you measure the effectiveness of your Facebook ads.</p>
-      </li>
-      <li>
-        <img src="https://census.com/assets/img/data-sources/salesforce-data-cloud.svg" alt="Salesforce Data Cloud">
-        <h2 class="data-source-name">Salesforce Data Cloud</h2>
-        <p class="data-source-description">Salesforce Data Cloud is a suite of cloud-based data integration and analytics services.</p>
-      </li>
+      <!-- End block -->
     </ul>
-    <button class="button">Back</button>
-    <button class="button">Continue</button>
+
+    <div class="flex justify-between mt-6">
+      <button class="py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-500">Back</button>
+      <button class="py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-500">Continue</button>
+    </div>
   </div>
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $('.search-bar').on('keyup', function() {
   var value = $(this).val().toLowerCase();
