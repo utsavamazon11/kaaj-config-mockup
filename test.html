@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Integration</title>
+  <title>Kaaj AI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.3/tailwind.min.css">
   <style>
     .selected {
@@ -17,8 +17,8 @@
 
   <header class="flex justify-between py-6">
     <div>
-      <h1 class="text-4xl font-bold text-gray-800">Data Integration</h1>
-      <p class="text-gray-600">A sleek and modern web app for managing data sources.</p>
+      <h1 class="text-4xl font-bold text-gray-800">Kaaj AI</h1>
+      <p class="text-gray-600">Let data work for you</p>
     </div>
     <nav class="flex">
       <a href="#" class="text-gray-800 text-sm mr-6 hover:text-indigo-500">Connect destination</a>
@@ -36,19 +36,23 @@
   </div>
 
   <div class="main-box ml-64 mt-8">
-    <h2 class="text-2xl mb-2">Data Sources</h2>
-    <input type="text" class="search-bar w-full p-2 mb-6 border border-gray-300 rounded-md" placeholder="Search data sources">
+    <h2 class="text-2xl mb-2">Select a Data Source</h2>
+    <input type="text" class="search-bar w-full p-2 mb-6 border border-gray-300 rounded-full" placeholder="Search data sources">
 
     <ul class="space-y-4">
-      <li class="flex bg-white shadow rounded p-4 data-source">
-        <img class="h-12 w-12" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
+      <li class="flex bg-white shadow rounded-lg p-4 data-source">
+        <div class="flex-none w-16 h-16 mr-4">
+          <img class="object-contain w-full h-full" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
+        </div>
         <div class="ml-4">
           <h2 class="text-lg font-semibold">S</h2>
           <p class="text-gray-600">S Desc</p>
         </div>
       </li>
-      <li class="flex bg-white shadow rounded p-4 data-source">
-        <img class="h-12 w-12" src="https://i0.wp.com/www.about-fraud.com/wp-content/uploads/2017/05/logo2.png?fit=500%2C500&ssl=1" alt="Mitek">
+      <li class="flex bg-white shadow rounded-lg p-4 data-source">
+        <div class="flex-none w-16 h-16 mr-4">
+          <img class="object-contain w-full h-full" src="https://i0.wp.com/www.about-fraud.com/wp-content/uploads/2017/05/logo2.png?fit=500%2C500&ssl=1" alt="Mitek">
+        </div>
         <div class="ml-4">
           <h2 class="text-lg font-semibold">M</h2>
           <p class="text-gray-600">M Desc</p>
@@ -57,8 +61,8 @@
     </ul>
 
     <div class="flex justify-between mt-6">
-      <button class="py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-500">Back</button>
-      <button class="py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-500" id="continue-button" disabled>Continue</button>
+      <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500">Back</button>
+      <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500" id="continue-button" disabled>Continue</button>
     </div>
   </div>
 
