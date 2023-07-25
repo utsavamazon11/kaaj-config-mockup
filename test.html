@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Integration</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.3/tailwind.min.css">
 </head>
 <body class="font-sans bg-gray-100">
 
 <div class="container mx-auto px-4">
 
   <header class="flex justify-between py-6">
+    <div>
+      <h1 class="text-4xl font-bold text-gray-800">Data Integration</h1>
+      <p class="text-gray-600">A sleek and modern web app for managing data sources.</p>
+    </div>
     <nav class="flex">
       <a href="#" class="text-gray-800 text-sm mr-6 hover:text-indigo-500">Connect destination</a>
       <a href="#" class="text-gray-800 text-sm mr-6 hover:text-indigo-500">Connect source</a>
@@ -31,7 +35,6 @@
     <input type="text" class="search-bar w-full p-2 mb-6 border border-gray-300 rounded-md" placeholder="Search data sources">
 
     <ul class="space-y-4">
-      <!-- Repeat this block for each data source -->
       <li class="flex bg-white shadow rounded p-4">
         <img class="h-12 w-12" src="https://census.com/assets/img/data-sources/google-analytics.svg" alt="Google Analytics">
         <div class="ml-4">
@@ -39,7 +42,6 @@
           <p class="text-gray-600">Google Analytics is a web analytics service that tracks and reports website traffic.</p>
         </div>
       </li>
-      <!-- End block -->
     </ul>
 
     <div class="flex justify-between mt-6">
