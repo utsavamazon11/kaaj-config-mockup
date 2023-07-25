@@ -70,9 +70,7 @@
     
     <div class="flex justify-between mt-6">
       <button class="py-2 px-4 bg-gray-400 text-white rounded-full hover:bg-gray-600">Back</button>
-      <a href="connect_source.html">
-        <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500" id="continue-button" disabled>Continue</button>
-      </a>
+      <button class="py-2 px-4 bg-gray-600 text-white rounded-full" id="continue-button" disabled>Continue</button>
     </div>
   </div>
 
@@ -92,13 +90,18 @@ $('.search-bar').on('keyup', function() {
 });
 
 $('.data-destination').on('click', function() {
-  $(this).toggleClass('selected');
-  if ($('.selected').length > 0) {
-    $('#continue-button').prop('disabled', false);
-  } else {
-    $('#continue-button').prop('disabled', true);
+  $('.data-destination').removeClass('selected');
+  $(this).addClass('selected');
+  $('#continue-button').prop('disabled', false).removeClass('bg-gray-600').addClass('bg-indigo-600');
+  $('#selected-value').text($(this).find('h2').text()); // display the selected value
+});
+
+$('#continue-button').on('click', function() {
+  if (!$(this).prop('disabled')) {
+    window.location.href = 'connect_source.html'; // replace with the URL of your page
   }
 });
+  
 </script>
 
 </body>
