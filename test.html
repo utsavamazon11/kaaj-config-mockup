@@ -21,17 +21,17 @@
       <p class="text-gray-600">Let data work for you</p>
     </div>
     <nav class="flex">
-      <a href="#" class="text-gray-800 text-sm mr-8 hover:text-indigo-500">Connect destination</a>
-      <a href="#" class="font-bold text-indigo-800 text-sm mr-8 hover:text-indigo-800">Connect source</a>
-      <a href="#" class="text-gray-800 text-sm hover:text-indigo-500">Complete initial sync</a>
+      <a href="#" class="text-base text-gray-800 text-sm mr-8 hover:text-indigo-500">Connect destination</a>
+      <a href="#" class="text-base font-bold text-indigo-800 text-sm mr-8 hover:text-indigo-800">Connect source</a>
+      <a href="#" class="text-base text-gray-800 text-sm hover:text-indigo-500">Complete initial sync</a>
     </nav>
   </header>
 
   <div class="w-1/5 pt-8 fixed">
     <nav>
-      <a href="#" class="font-bold text-indigo-800 text-sm block mb-8 hover:text-indigo-500">Connectors</a>
-      <a href="#" class="text-gray-800 text-sm block mb-8 hover:text-indigo-500">Transformations</a>
-      <a href="#" class="text-gray-800 text-sm block mb-8 hover:text-indigo-500">Destinations</a>
+      <a href="#" class="text-base font-bold text-indigo-800 text-sm block mb-8 hover:text-indigo-500">Connectors</a>
+      <a href="#" class="text-base text-gray-800 text-sm block mb-8 hover:text-indigo-500">Transformations</a>
+      <a href="#" class="text-base text-gray-800 text-sm block mb-8 hover:text-indigo-500">Destinations</a>
     </nav>
   </div>
 
@@ -43,50 +43,53 @@
     <h2 class="text-2xl mb-2">Select a Data Source</h2>
     <input type="text" class="search-bar w-full p-3 mb-6 border border-gray-300 rounded-full" placeholder="Search data sources">
 
-    <ul class="space-y-4">
-      <li class="flex bg-white shadow rounded-lg p-2 data-source">
-        <div class="flex-none w-16 h-9 mr-4">
-          <img class="object-contain w-full h-full" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
-        </div>
-        <div class="ml-4 flex flex-col justify-center">
-          <h2 class="text-lg font-semibold">Socure - ID Verification</h2>
-        </div>
-      </li>
-      <li class="flex bg-white shadow rounded-lg p-2 data-source">
-        <div class="flex-none w-16 h-9 mr-4">
-          <img class="object-contain w-full h-full" src="https://i0.wp.com/www.about-fraud.com/wp-content/uploads/2017/05/logo2.png?fit=500%2C500&ssl=1" alt="Mitek">
-        </div>
-        <div class="ml-4 flex flex-col justify-center">
-          <h2 class="text-lg font-semibold">Mitek</h2>
-        </div>
-      </li>
-      <li class="flex bg-white shadow rounded-lg p-2 data-source">
-        <div class="flex-none w-16 h-9 mr-4">
-          <img class="object-contain w-full h-full" src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wtcyqwcnybrm9v0xfm5c" alt="Sentilink">
-        </div>
-        <div class="ml-4 flex flex-col justify-center">
-          <h2 class="text-lg font-semibold">Sentilink</h2>
-        </div>
-      </li>
-      <li class="flex bg-white shadow rounded-lg p-2 data-source">
-        <div class="flex-none w-16 h-9 mr-4">
-          <img class="object-contain w-full h-full" src="https://companieslogo.com/img/orig/EFX-19aaca33.png?t=1652265147" alt="Equifax">
-        </div>
-        <div class="ml-4 flex flex-col justify-center">
-          <h2 class="text-lg font-semibold">Equifax</h2>
-        </div>
-      </li>
-      <li class="flex bg-white shadow rounded-lg p-2 data-source">
-        <div class="flex-none w-16 h-9 mr-4">
-          <img class="object-contain w-full h-full" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
-        </div>
-        <div class="ml-4 flex flex-col justify-center">
-          <h2 class="text-lg font-semibold">Socure - Application Risk Score</h2>
-        </div>
-      </li>
-    </ul>
+    <div class="h-40 overflow-y-auto mb-6">
+      <ul class="space-y-4">
+        <li class="flex bg-white shadow rounded-lg p-2 data-source">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Socure - ID Verification</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-source">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://i0.wp.com/www.about-fraud.com/wp-content/uploads/2017/05/logo2.png?fit=500%2C500&ssl=1" alt="Mitek">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Mitek</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-source">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/wtcyqwcnybrm9v0xfm5c" alt="Sentilink">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Sentilink</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-source">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://companieslogo.com/img/orig/EFX-19aaca33.png?t=1652265147" alt="Equifax">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Equifax</h2>
+          </div>
+        </li>
+        <li class="flex bg-white shadow rounded-lg p-2 data-source">
+          <div class="flex-none w-16 h-9 mr-4">
+            <img class="object-contain w-full h-full" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_183656ad1cf33cf247980538211f9e55/socure-identity-verification.png" alt="Socure">
+          </div>
+          <div class="ml-4 flex flex-col justify-center">
+            <h2 class="text-lg font-semibold">Socure - Application Risk Score</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
     <div class="flex justify-between mt-6">
-      <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500">Back</button>
+      <button class="py-2 px-4 bg-gray-400 text-white rounded-full hover:bg-gray-600">Back</button>
       <button class="py-2 px-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500" id="continue-button" disabled>Continue</button>
     </div>
   </div>
