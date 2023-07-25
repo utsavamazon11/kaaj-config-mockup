@@ -1,0 +1,110 @@
+/* Header */
+
+.header {
+  background-color: #2980b9;
+  background-image: linear-gradient(to right, #2980b9, #96c0ee);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.header h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.header .search-bar {
+  margin-top: 2rem;
+}
+
+.header .search-bar input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: #fff;
+  color: #2980b9;
+}
+
+.header .search-bar button {
+  background-color: #fff;
+  color: #2980b9;
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+}
+
+/* Main */
+
+.main {
+  padding: 3rem 0;
+}
+
+.main h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2980b9;
+}
+
+.main .row {
+  margin-bottom: 2rem;
+}
+
+.main .card {
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.main .card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.main .card .card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.main .card .card-body {
+  padding: 1rem;
+}
+
+.main .card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main .card .card-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.main .card .btn {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #2980b9;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
